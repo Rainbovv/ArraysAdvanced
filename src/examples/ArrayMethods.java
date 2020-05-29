@@ -44,10 +44,10 @@ public class ArrayMethods {
         return array;
     }
 
-    public static float min(float[] temperatures) {
-        float min = temperatures[0];
+    public static float min(float[] nums) {
+        float min = nums[0];
 
-        for (float f: temperatures) {
+        for (float f: nums) {
             if (f < min) min = f;
         }
 
@@ -64,10 +64,10 @@ public class ArrayMethods {
         return min;
     }
 
-    public static float max(float[] temperatures) {
-        float max = temperatures[0];
+    public static float max(float[] nums) {
+        float max = nums[0];
 
-        for (float f: temperatures) {
+        for (float f: nums) {
             if (f > max) max = f;
         }
 
@@ -118,10 +118,8 @@ public class ArrayMethods {
         int[] result = new int[nums.length];
 
         for (int i = 0; i < result.length; i++) {
-            if (i == result.length - 1) result[i] = nums[0];
-
             else result[i] = min(nums);
-                nums = indexToDelete(nums, firstEnterIndex(nums, result[i]));
+            nums = indexToDelete(nums, firstEnterIndex(nums, result[i]));
         }
         return result;
     }
@@ -166,4 +164,3 @@ public class ArrayMethods {
         return -1;
     }
 }
-

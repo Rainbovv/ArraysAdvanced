@@ -100,7 +100,7 @@ public class ArrayMethods {
 
     public static float[] indexToInsert(float[] array, float value, int index) {
 
-        if (index >= 0 || index <= array.length) {
+        if (index >= 0 && index <= array.length) {
             float[] result = new float[array.length + 1];
             result[index] = value;
 
@@ -126,7 +126,7 @@ public class ArrayMethods {
 
     public static int[] indexToDelete(int[] nums, int index) {
 
-        if (index >= 0 || index < nums.length) {
+        if (index >= 0 && index < nums.length) {
             int[] result = new int[nums.length - 1];
 
             for (int i = 0, j = 0; i < nums.length; i++) {
@@ -141,7 +141,7 @@ public class ArrayMethods {
 
     public static float[] indexToDelete(float[] nums, int index) {
 
-        if (index >= 0 || index < nums.length) {
+        if (index >= 0 && index < nums.length) {
             float[] result = new float[nums.length - 1];
 
             for (int i = 0, j = 0; i < nums.length; i++) {

@@ -115,13 +115,19 @@ public class ArrayMethods {
     }
 
     public static int[] sortArray(int[] nums) {
-        int[] result = new int[nums.length];
-
-        for (int i = 0; i < result.length; i++) {
-            else result[i] = min(nums);
-            nums = indexToDelete(nums, firstEnterIndex(nums, result[i]));
+        boolean sorted = false;
+        int temp;
+        while(!sorted) {
+            sorted = true;
+            for (int i = 0; i < array.length - 1; i++) {
+                if (array[i] > array[i+1]) {
+                    temp = array[i];
+                    array[i] = array[i+1];
+                    array[i+1] = temp;
+                    sorted = false;
+                }
+            }
         }
-        return result;
     }
 
     public static int[] indexToDelete(int[] nums, int index) {
